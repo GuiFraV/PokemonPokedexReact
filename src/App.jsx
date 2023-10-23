@@ -1,13 +1,14 @@
+import List from './components/List'
+
 function App() {
 
   return (
-   <h1>API pokedex pokemon</h1>
+    <div>
+      <h1>API pokedex pokemon</h1>
+      <List />
+    </div>
   )
 
-
-
-
-  
 }
 
 export default App
