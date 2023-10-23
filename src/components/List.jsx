@@ -24,15 +24,15 @@ function List(){
             for(let i = 1; i< 151; i++){
                 const data = await fetchData(i)
                 if(data){
-                    catchThemAll.push(allPokemon)
+                    catchThemAll.push(data)
                 }
-                catchThemAll.push(data)
             }
             setPokemon(catchThemAll);
+            console.log(catchThemAll.filter(p => p));
             setLoading(false);
         }
         allPokemon();
-    },[pokemon.length])
+    },[])
 
     return (
         <div>
@@ -40,7 +40,7 @@ function List(){
             {loading ? (
                 <p>Loading...</p>
             ) : (
-                pokemon.map((p, i) => <Pokemon key={i} name={p.name} image={p.image}  />
+                pokemon.map((p, i) => <Pokemon key={i} name={p.name} image={p.image} /> 
             ))}
         </div>
     )
