@@ -35,12 +35,12 @@ function List(){
     },[])
 
     return (
-        <div>
+        <div className='row row-cols-3'>
             <p>Liste des Pokemon 1G</p>
             {loading ? (
                 <p>Loading...</p>
             ) : (
-                pokemon.map((p, i) => <Pokemon key={i} name={p.name} image={p.image} /> 
+                pokemon.map((p, i) => <Pokemon key={i} counter={i+1} name={p.name} image={p.image} /> 
             ))}
         </div>
     )

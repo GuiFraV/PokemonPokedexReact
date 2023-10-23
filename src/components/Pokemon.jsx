@@ -1,14 +1,14 @@
-function Pokemon({ image, name }) {  
+function Pokemon({ image, name, counter }) {  
     return (
-        <div className="col-3">
-            <div className="card">
+        <div>
+            <div className="card" style={{width: "100%" }}>
                 <img 
                     src={image} 
                     alt={name}
                     className="card-img-top" 
                 />
                 <div className="card-body">
-                    <h3 className="card-title">{name}</h3>
+                    <h3 className="card-title text-center">{counter}# {name}</h3>
                 </div>
             </div>
         </div>
